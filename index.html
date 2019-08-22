@@ -90,7 +90,9 @@
 <li>3.命名空间 @namespace</li>
 <li>4.版本 @version</li>
 <li>5.匹配的网址 @match @include 、【@exclude（不包含的网址，优先级最高）】</li>
-<li>6.引用外部js @require<h1 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例"></a>2.实例</h1><pre><code class="bash">// ==UserScript==
+<li>6.引用外部js @require</li>
+</ul>
+<h1 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例"></a>2.实例</h1><pre><code class="bash">// ==UserScript==
 // @name          测试
 // @require https://code.jquery.com/jquery-2.1.4.min.js
 // @namespace
@@ -99,32 +101,31 @@
 // ==/UserScript==
 var arrsrc = [];
 (<span class="function"><span class="title">function</span></span> () {
-<span class="string">'use strict'</span>;
-<span class="keyword">if</span> (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(<span class="keyword">function</span>(pos) {
-    // 成功回调函数，接受一个地理位置的对象作为参数。
-    // https://developer.mozilla.org/cn/docs/Web/API/Position 参数说明
-    alert(pos.coords.latitude + <span class="string">'  '</span>+pos.coords.longitude);
-}, <span class="keyword">function</span>(err) {
-    // 错误的回调
-    // https://developer.mozilla.org/cn/docs/Web/API/PositionError 错误参数
-}, {
-    enableHighAccuracy: <span class="literal">true</span>, // 是否获取高精度结果
-    timeout: 5000, //超时,毫秒
-    maximumAge: 0 //可以接受多少毫秒的缓存位置
-    // 详细说明 https://developer.mozilla.org/cn/docs/Web/API/PositionOptions
-});
-} <span class="keyword">else</span> {
-  alert(<span class="string">'抱歉！您的浏览器无法使用地位功能'</span>);
-}
+    <span class="string">'use strict'</span>;
+   <span class="keyword">if</span> (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(<span class="keyword">function</span>(pos) {
+        // 成功回调函数，接受一个地理位置的对象作为参数。
+        // https://developer.mozilla.org/cn/docs/Web/API/Position 参数说明
+        alert(pos.coords.latitude + <span class="string">'  '</span>+pos.coords.longitude);
+    }, <span class="keyword">function</span>(err) {
+        // 错误的回调
+        // https://developer.mozilla.org/cn/docs/Web/API/PositionError 错误参数
+    }, {
+        enableHighAccuracy: <span class="literal">true</span>, // 是否获取高精度结果
+        timeout: 5000, //超时,毫秒
+        maximumAge: 0 //可以接受多少毫秒的缓存位置
+        // 详细说明 https://developer.mozilla.org/cn/docs/Web/API/PositionOptions
+    });
+  } <span class="keyword">else</span> {
+      alert(<span class="string">'抱歉！您的浏览器无法使用地位功能'</span>);
+  }
 })();</code></pre>
-<h1 id="3-脚本网址"><a href="#3-脚本网址" class="headerlink" title="3.脚本网址"></a>3.脚本网址</h1><a href="https://greasyfork.org/zh-CN/scripts" target="_blank" rel="noopener">脚本提供网址</a></li>
-</ul>
+<h1 id="3-脚本网址"><a href="#3-脚本网址" class="headerlink" title="3.脚本网址"></a>3.脚本网址</h1><p><a href="https://greasyfork.org/zh-CN/scripts" target="_blank" rel="noopener">脚本提供网址</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/16/yhscript/" data-id="cjzmfhezu0000usw7s8fuj0xn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/16/yhscript/" data-id="cjzmfj1ug0001hcw7npqaotvg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +174,7 @@ navigator.geolocation.getCurrentPosition(<span class="keyword">function</span>(p
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/15/hello-world/" data-id="cjzmfhf0e0001usw70ugkz0te" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/15/hello-world/" data-id="cjzmfj1tu0000hcw77r5t66jw" class="article-share-link">Share</a>
       
       
     </footer>
